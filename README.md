@@ -3,7 +3,7 @@ AirDrop spammer / flooder to troll friends
 
 ![Artboard](https://user-images.githubusercontent.com/52459150/203855388-0ca5b060-fb64-4181-affc-68bfa917b230.png)
 
-Join my Discord aerver https://discord.gg/VyVcNjRMeg
+Join my Discord server https://discord.gg/VyVcNjRMeg
 
 ## FAQ
 
