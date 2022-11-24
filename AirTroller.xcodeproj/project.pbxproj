@@ -32,7 +32,6 @@
 		CEA8C1132913226E00B583B8 /* AirTroller-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AirTroller-Bridging-Header.h"; sourceTree = "<group>"; };
 		CEC0AA9829141BD000780A70 /* RemoteLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoteLog.h; sourceTree = "<group>"; };
 		CEC0AA9F2915494B00780A70 /* entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = entitlements.plist; sourceTree = "<group>"; };
-		CEC353D22916EF7000F6661F /* RootHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootHelper.swift; sourceTree = "<group>"; };
 		CEC415EE292C2A2400D0DA9A /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		CED5368B2926CF53002FAF9B /* TrollController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrollController.swift; sourceTree = "<group>"; };
 		CED5368D2926CF5A002FAF9B /* Sharing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sharing.swift; sourceTree = "<group>"; };
@@ -60,7 +59,6 @@
 				CED536912926CF9E002FAF9B /* fr.png */,
 				CEC0AA9F2915494B00780A70 /* entitlements.plist */,
 				CEA8C0F92912AA5C00B583B8 /* AirTroller */,
-				CEC353D12916EF7000F6661F /* RootHelper */,
 				CEA8C0F82912AA5C00B583B8 /* Products */,
 				CEC0AA9629141AEC00780A70 /* Frameworks */,
 			);
@@ -104,14 +102,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CEC353D12916EF7000F6661F /* RootHelper */ = {
-			isa = PBXGroup;
-			children = (
-				CEC353D22916EF7000F6661F /* RootHelper.swift */,
-			);
-			path = RootHelper;
 			sourceTree = "<group>";
 		};
 		CED536932926D479002FAF9B /* trolldrop */ = {
