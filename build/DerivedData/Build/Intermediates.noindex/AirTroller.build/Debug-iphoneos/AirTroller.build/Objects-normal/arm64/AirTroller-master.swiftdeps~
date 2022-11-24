@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.7.1 (swiftlang-5.7.1.135.2 clang-1400.0.29.51)"
+options: "d01500aaae7d7251b646bb2f43e9983be52c742711acffc506c423a8f1b01a8c"
+build_start_time: [1668708645, 458708047]
+build_end_time: [1668708645, 489207983]
+inputs:
+  "/Users/exerhythm/developer/tweaks/AirTroller/AirTroller/AirTrollerApp.swift": !private [1667490900, 347246170]
+  "/Users/exerhythm/developer/tweaks/AirTroller/AirTroller/ContentView.swift": !private [1668707287, 6804227]
+  "/Users/exerhythm/developer/tweaks/AirTroller/AirTroller/TrollController.swift": !private [1667858578, 283324480]

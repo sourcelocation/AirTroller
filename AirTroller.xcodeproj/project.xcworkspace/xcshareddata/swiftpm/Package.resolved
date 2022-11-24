@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "dynamic",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mhdhejazi/Dynamic",
+      "state" : {
+        "branch" : "master",
+        "revision" : "772883073d044bc754d401cabb6574624eb3778f"
+      }
+    },
+    {
+      "identity" : "onboarding",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/elihwyma/Onboarding",
+      "state" : {
+        "branch" : "main",
+        "revision" : "428efb54d54cf583b99742251e842951788365d0"
+      }
+    }
+  ],
+  "version" : 2
+}

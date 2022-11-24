@@ -1,0 +1,17 @@
+version: "Apple Swift version 5.7.1 (swiftlang-5.7.1.135.2 clang-1400.0.29.51)"
+options: "dcb4d7f04df052388dc09571dd2e2c3132c57fefb47dc2a199e273197bb66d58"
+build_start_time: [1668729391, 265172004]
+build_end_time: [1668729391, 352909088]
+inputs:
+  ? "/Users/exerhythm/developer/tweaks/AirTroller/build/DerivedData/SourcePackages/checkouts/Onboarding/Sources/Onboarding/OnboardingBulletinView.swift"
+  : !private [1668729388, 602804422]
+  ? "/Users/exerhythm/developer/tweaks/AirTroller/build/DerivedData/SourcePackages/checkouts/Onboarding/Sources/Onboarding/OnboardingButton.swift"
+  : !private [1668729388, 602883100]
+  ? "/Users/exerhythm/developer/tweaks/AirTroller/build/DerivedData/SourcePackages/checkouts/Onboarding/Sources/Onboarding/OnboardingButtonType.swift"
+  : !private [1668729388, 602952003]
+  ? "/Users/exerhythm/developer/tweaks/AirTroller/build/DerivedData/SourcePackages/checkouts/Onboarding/Sources/Onboarding/OnboardingImageView.swift"
+  : !private [1668729388, 603015422]
+  ? "/Users/exerhythm/developer/tweaks/AirTroller/build/DerivedData/SourcePackages/checkouts/Onboarding/Sources/Onboarding/OnboardingViewController.swift"
+  : !private [1668729388, 603090524]
+  ? "/Users/exerhythm/developer/tweaks/AirTroller/build/DerivedData/SourcePackages/checkouts/Onboarding/Sources/Onboarding/ThemeManager.swift"
+  : !private [1668729388, 603159189]

@@ -1,0 +1,4 @@
+module Dynamic {
+header "Dynamic-Swift.h"
+export *
+}

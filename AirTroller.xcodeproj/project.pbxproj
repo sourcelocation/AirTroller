@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE031C59292FECF100A1E4CB /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE031C58292FECF100A1E4CB /* ImagePickerView.swift */; };
+		CEA8C0FB2912AA5C00B583B8 /* AirTrollerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8C0FA2912AA5C00B583B8 /* AirTrollerApp.swift */; };
+		CEA8C0FD2912AA5C00B583B8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8C0FC2912AA5C00B583B8 /* ContentView.swift */; };
+		CEA8C0FF2912AA5E00B583B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA8C0FE2912AA5E00B583B8 /* Assets.xcassets */; };
+		CEA8C1022912AA5E00B583B8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA8C1012912AA5E00B583B8 /* Preview Assets.xcassets */; };
+		CEA8C10C291307C800B583B8 /* Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CEA8C10B291307C800B583B8 /* Dynamic */; };
+		CEC415EF292C2A2400D0DA9A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC415EE292C2A2400D0DA9A /* Alert.swift */; };
+		CED5368C2926CF53002FAF9B /* TrollController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED5368B2926CF53002FAF9B /* TrollController.swift */; };
+		CED5368F2926CF5A002FAF9B /* Sharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED5368D2926CF5A002FAF9B /* Sharing.swift */; };
+		CED536902926CF5A002FAF9B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED5368E2926CF5A002FAF9B /* Person.swift */; };
+		CED536922926CF9E002FAF9B /* fr.png in Resources */ = {isa = PBXBuildFile; fileRef = CED536912926CF9E002FAF9B /* fr.png */; };
+		CED536B02926F91A002FAF9B /* Onboarding in Frameworks */ = {isa = PBXBuildFile; productRef = CED536AF2926F91A002FAF9B /* Onboarding */; };
+		CED536B22926FC5D002FAF9B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED536B12926FC5D002FAF9B /* Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CE031C58292FECF100A1E4CB /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		CEA8C0F72912AA5C00B583B8 /* AirTroller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirTroller.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA8C0FA2912AA5C00B583B8 /* AirTrollerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTrollerApp.swift; sourceTree = "<group>"; };
+		CEA8C0FC2912AA5C00B583B8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CEA8C0FE2912AA5E00B583B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEA8C1012912AA5E00B583B8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CEA8C1132913226E00B583B8 /* AirTroller-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AirTroller-Bridging-Header.h"; sourceTree = "<group>"; };
+		CEC0AA9829141BD000780A70 /* RemoteLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoteLog.h; sourceTree = "<group>"; };
+		CEC0AA9F2915494B00780A70 /* entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = entitlements.plist; sourceTree = "<group>"; };
+		CEC353D22916EF7000F6661F /* RootHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootHelper.swift; sourceTree = "<group>"; };
+		CEC415EE292C2A2400D0DA9A /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		CED5368B2926CF53002FAF9B /* TrollController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrollController.swift; sourceTree = "<group>"; };
+		CED5368D2926CF5A002FAF9B /* Sharing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sharing.swift; sourceTree = "<group>"; };
+		CED5368E2926CF5A002FAF9B /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		CED536912926CF9E002FAF9B /* fr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fr.png; sourceTree = "<group>"; };
+		CED536B12926FC5D002FAF9B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEA8C0F42912AA5C00B583B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA8C10C291307C800B583B8 /* Dynamic in Frameworks */,
+				CED536B02926F91A002FAF9B /* Onboarding in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEA8C0EE2912AA5C00B583B8 = {
+			isa = PBXGroup;
+			children = (
+				CED536912926CF9E002FAF9B /* fr.png */,
+				CEC0AA9F2915494B00780A70 /* entitlements.plist */,
+				CEA8C0F92912AA5C00B583B8 /* AirTroller */,
+				CEC353D12916EF7000F6661F /* RootHelper */,
+				CEA8C0F82912AA5C00B583B8 /* Products */,
+				CEC0AA9629141AEC00780A70 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CEA8C0F82912AA5C00B583B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEA8C0F72912AA5C00B583B8 /* AirTroller.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEA8C0F92912AA5C00B583B8 /* AirTroller */ = {
+			isa = PBXGroup;
+			children = (
+				CEA8C0FA2912AA5C00B583B8 /* AirTrollerApp.swift */,
+				CEA8C0FC2912AA5C00B583B8 /* ContentView.swift */,
+				CEC0AA9829141BD000780A70 /* RemoteLog.h */,
+				CED536932926D479002FAF9B /* trolldrop */,
+				CEA8C0FE2912AA5E00B583B8 /* Assets.xcassets */,
+				CEA8C1002912AA5E00B583B8 /* Preview Content */,
+				CEA8C1132913226E00B583B8 /* AirTroller-Bridging-Header.h */,
+				CED536B12926FC5D002FAF9B /* Extensions.swift */,
+				CEC415EE292C2A2400D0DA9A /* Alert.swift */,
+				CE031C58292FECF100A1E4CB /* ImagePickerView.swift */,
+			);
+			path = AirTroller;
+			sourceTree = "<group>";
+		};
+		CEA8C1002912AA5E00B583B8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CEA8C1012912AA5E00B583B8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CEC0AA9629141AEC00780A70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEC353D12916EF7000F6661F /* RootHelper */ = {
+			isa = PBXGroup;
+			children = (
+				CEC353D22916EF7000F6661F /* RootHelper.swift */,
+			);
+			path = RootHelper;
+			sourceTree = "<group>";
+		};
+		CED536932926D479002FAF9B /* trolldrop */ = {
+			isa = PBXGroup;
+			children = (
+				CED5368B2926CF53002FAF9B /* TrollController.swift */,
+				CED5368E2926CF5A002FAF9B /* Person.swift */,
+				CED5368D2926CF5A002FAF9B /* Sharing.swift */,
+			);
+			path = trolldrop;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEA8C0F62912AA5C00B583B8 /* AirTroller */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEA8C1052912AA5E00B583B8 /* Build configuration list for PBXNativeTarget "AirTroller" */;
+			buildPhases = (
+				CEA8C0F32912AA5C00B583B8 /* Sources */,
+				CEA8C0F42912AA5C00B583B8 /* Frameworks */,
+				CEA8C0F52912AA5C00B583B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirTroller;
+			packageProductDependencies = (
+				CEA8C10B291307C800B583B8 /* Dynamic */,
+				CED536AF2926F91A002FAF9B /* Onboarding */,
+			);
+			productName = AirTroller;
+			productReference = CEA8C0F72912AA5C00B583B8 /* AirTroller.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEA8C0EF2912AA5C00B583B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					CEA8C0F62912AA5C00B583B8 = {
+						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
+					};
+				};
+			};
+			buildConfigurationList = CEA8C0F22912AA5C00B583B8 /* Build configuration list for PBXProject "AirTroller" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEA8C0EE2912AA5C00B583B8;
+			packageReferences = (
+				CEA8C10A291307C800B583B8 /* XCRemoteSwiftPackageReference "Dynamic" */,
+				CED536AE2926F919002FAF9B /* XCRemoteSwiftPackageReference "Onboarding" */,
+			);
+			productRefGroup = CEA8C0F82912AA5C00B583B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEA8C0F62912AA5C00B583B8 /* AirTroller */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEA8C0F52912AA5C00B583B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA8C1022912AA5E00B583B8 /* Preview Assets.xcassets in Resources */,
+				CED536922926CF9E002FAF9B /* fr.png in Resources */,
+				CEA8C0FF2912AA5E00B583B8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEA8C0F32912AA5C00B583B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED5368C2926CF53002FAF9B /* TrollController.swift in Sources */,
+				CED536B22926FC5D002FAF9B /* Extensions.swift in Sources */,
+				CEA8C0FD2912AA5C00B583B8 /* ContentView.swift in Sources */,
+				CED536902926CF5A002FAF9B /* Person.swift in Sources */,
+				CE031C59292FECF100A1E4CB /* ImagePickerView.swift in Sources */,
+				CED5368F2926CF5A002FAF9B /* Sharing.swift in Sources */,
+				CEA8C0FB2912AA5C00B583B8 /* AirTrollerApp.swift in Sources */,
+				CEC415EF292C2A2400D0DA9A /* Alert.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CEA8C1032912AA5E00B583B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEA8C1042912AA5E00B583B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEA8C1062912AA5E00B583B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = AirTroller/AirTroller.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AirTroller/Preview Content\"";
+				DEVELOPMENT_TEAM = 92S6JX27W2;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AirTroller",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Well, you clicked this button, what did you expect :troll:";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.sourceloc.AirTroller;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AirTroller/AirTroller-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEA8C1072912AA5E00B583B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = AirTroller/AirTroller.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AirTroller/Preview Content\"";
+				DEVELOPMENT_TEAM = 92S6JX27W2;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AirTroller",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Well, you clicked this button, what did you expect :troll:";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.sourceloc.AirTroller;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AirTroller/AirTroller-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEA8C0F22912AA5C00B583B8 /* Build configuration list for PBXProject "AirTroller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA8C1032912AA5E00B583B8 /* Debug */,
+				CEA8C1042912AA5E00B583B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEA8C1052912AA5E00B583B8 /* Build configuration list for PBXNativeTarget "AirTroller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA8C1062912AA5E00B583B8 /* Debug */,
+				CEA8C1072912AA5E00B583B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEA8C10A291307C800B583B8 /* XCRemoteSwiftPackageReference "Dynamic" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mhdhejazi/Dynamic";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CED536AE2926F919002FAF9B /* XCRemoteSwiftPackageReference "Onboarding" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elihwyma/Onboarding";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEA8C10B291307C800B583B8 /* Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEA8C10A291307C800B583B8 /* XCRemoteSwiftPackageReference "Dynamic" */;
+			productName = Dynamic;
+		};
+		CED536AF2926F91A002FAF9B /* Onboarding */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED536AE2926F919002FAF9B /* XCRemoteSwiftPackageReference "Onboarding" */;
+			productName = Onboarding;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CEA8C0EF2912AA5C00B583B8 /* Project object */;
+}

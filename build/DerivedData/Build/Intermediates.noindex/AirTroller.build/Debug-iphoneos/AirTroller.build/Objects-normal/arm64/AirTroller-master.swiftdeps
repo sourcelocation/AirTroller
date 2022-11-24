@@ -1,0 +1,13 @@
+version: "Apple Swift version 5.7.1 (swiftlang-5.7.1.135.2 clang-1400.0.29.51)"
+options: "37bc59795481a156cf2e2f18d20b79227b3e3fc8cf34860d8127eee4bf29c833"
+build_start_time: [1669315340, 214282035]
+build_end_time: [1669315342, 58977127]
+inputs:
+  "/Users/exerhythm/developer/tweaks/AirTroller/AirTroller/AirTrollerApp.swift": [1669069062, 659496784]
+  "/Users/exerhythm/developer/tweaks/AirTroller/AirTroller/Alert.swift": [1669071591, 826703548]
+  "/Users/exerhythm/developer/tweaks/AirTroller/AirTroller/ContentView.swift": [1669315336, 993484020]
+  "/Users/exerhythm/developer/tweaks/AirTroller/AirTroller/Extensions.swift": [1668728038, 193242073]
+  "/Users/exerhythm/developer/tweaks/AirTroller/AirTroller/ImagePickerView.swift": [1669314238, 531036853]
+  "/Users/exerhythm/developer/tweaks/AirTroller/AirTroller/trolldrop/Person.swift": [1668774747, 349623203]
+  "/Users/exerhythm/developer/tweaks/AirTroller/AirTroller/trolldrop/Sharing.swift": [1668719882, 693314552]
+  "/Users/exerhythm/developer/tweaks/AirTroller/AirTroller/trolldrop/TrollController.swift": [1669314651, 305208683]
