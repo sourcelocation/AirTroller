@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE031C59292FECF100A1E4CB /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE031C58292FECF100A1E4CB /* ImagePickerView.swift */; };
+		CE031C5B292FF38E00A1E4CB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CE031C5A292FF38E00A1E4CB /* .gitignore */; };
 		CEA8C0FB2912AA5C00B583B8 /* AirTrollerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8C0FA2912AA5C00B583B8 /* AirTrollerApp.swift */; };
 		CEA8C0FD2912AA5C00B583B8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8C0FC2912AA5C00B583B8 /* ContentView.swift */; };
 		CEA8C0FF2912AA5E00B583B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA8C0FE2912AA5E00B583B8 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		CE031C58292FECF100A1E4CB /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		CE031C5A292FF38E00A1E4CB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		CEA8C0F72912AA5C00B583B8 /* AirTroller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirTroller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA8C0FA2912AA5C00B583B8 /* AirTrollerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTrollerApp.swift; sourceTree = "<group>"; };
 		CEA8C0FC2912AA5C00B583B8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		CEA8C0EE2912AA5C00B583B8 = {
 			isa = PBXGroup;
 			children = (
+				CE031C5A292FF38E00A1E4CB /* .gitignore */,
 				CED536912926CF9E002FAF9B /* fr.png */,
 				CEC0AA9F2915494B00780A70 /* entitlements.plist */,
 				CEA8C0F92912AA5C00B583B8 /* AirTroller */,
@@ -181,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE031C5B292FF38E00A1E4CB /* .gitignore in Resources */,
 				CEA8C1022912AA5E00B583B8 /* Preview Assets.xcassets in Resources */,
 				CED536922926CF9E002FAF9B /* fr.png in Resources */,
 				CEA8C0FF2912AA5E00B583B8 /* Assets.xcassets in Resources */,
