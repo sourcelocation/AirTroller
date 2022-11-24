@@ -9,3 +9,7 @@ You bear the full responsibility of your actions and acknowledge that this softw
 This software's main purpose is NOT to be used maliciously, or targeting other's devices, or have the right to use.
 
 By using this software, you automatically agree to the above.
+
+
+### Credits:
+https://github.com/midnightchip/trolldrop - MIT
