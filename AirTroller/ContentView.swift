@@ -33,7 +33,7 @@ struct ContentView: View {
                 if trollController.people.count == 0 { // No users in radius
                     VStack {
                         ProgressView()
-                        Text("Searching devices...")
+                        Text("Searching for devices...")
                             .foregroundColor(.secondary)
                     }
                 } else {
