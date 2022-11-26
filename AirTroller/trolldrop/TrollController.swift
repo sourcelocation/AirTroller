@@ -14,9 +14,6 @@ func operationCallback(operation: TDKSFOperation, rawEvent: TDKSFOperationEvent.
     controller.handleOperationCallback(operation: operation, event: event, results: results)
 }
 
-func dataProviderRelease(_: UnsafeMutableRawPointer?, _: UnsafeRawPointer, _: Int) -> Void {
-}
-
 public class TrollController: ObservableObject {
     private enum Trolling {
         case operation(TDKSFOperation)
@@ -32,11 +29,7 @@ public class TrollController: ObservableObject {
         }
     }
     
-    public class Person: Equatable {
-        public static func == (lhs: TrollController.Person, rhs: TrollController.Person) -> Bool {
-            lhs.node == rhs.node
-        }
-        
+    public class Person {
         var displayName: String?
         var node: TDKSFNode
         
@@ -143,6 +136,8 @@ public class TrollController: ObservableObject {
     
     /// Troll the person/device identified by \c node (\c TDKSFNodeRef)
     func troll(node: TDKSFNode) {
+        guard trollings[node] == nil else { return } // only troll non-trolled people
+        
         remLog("trolling \(node)")
         
         var fileIcon: CGImage?
@@ -162,9 +157,13 @@ public class TrollController: ObservableObject {
         let operation = TDKSFOperationCreate(kCFAllocatorDefault, kTDKSFOperationKindSender, nil, nil)
         TDKSFOperationSetClient(operation, operationCallback, &clientContext)
         TDKSFOperationSetProperty(operation, kTDKSFOperationItemsKey, [sharedURL] as AnyObject)
+        
+        // Set preview if possible
         if let fileIcon = fileIcon {
             TDKSFOperationSetProperty(operation, kTDKSFOperationFileIconKey, fileIcon)
         }
+        
+        // Set url of image
         TDKSFOperationSetProperty(operation, kTDKSFOperationNodeKey, Unmanaged.fromOpaque(UnsafeRawPointer(node)).takeUnretainedValue())
         TDKSFOperationSetDispatchQueue(operation, .main)
         TDKSFOperationResume(operation)
@@ -174,7 +173,7 @@ public class TrollController: ObservableObject {
     }
     
     func handleBrowserCallback(browser: TDKSFBrowser, node: TDKSFNode, children: CFArray) {
-        let nodes = TDKSFBrowserCopyChildren(browser, nil) as [AnyObject]
+        let nodes = TDKSFBrowserCopyChildren(self.browser!, nil) as [AnyObject]
         var currentNodes = Set<TDKSFNode>(minimumCapacity: nodes.count)
         
         for nodeObject in nodes {
@@ -209,12 +208,12 @@ public class TrollController: ObservableObject {
             let workItem = DispatchWorkItem { [weak self] in
                 self?.eventHandler?(.cancelled)
                 self?.trollings[node]?.cancel() // cancelation of airdrop request
+                self?.trollings[node] = nil
                 
                 if self?.isRunning ?? false { // dumb fix of a bug
                     self?.troll(node: node) // troll again :troll:
                 }
             }
-            trollings[node] = .workItem(workItem)
             // wait for airdrop to appear on target device. afaik there isn't a way to know when the alert appeared.
             DispatchQueue.main.asyncAfter(deadline: .now() + rechargeDuration, execute: workItem) // rechargeDuration is controlled via UI
         default:

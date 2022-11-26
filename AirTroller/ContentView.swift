@@ -90,19 +90,21 @@ struct ContentView: View {
             }
             .navigationTitle("AirTroller")
             .toolbar {
-                ToolbarItemGroup(placement: .navigationBarLeading) {
-                    Button(action: {
-                        trollController.stopBrowser()
-                        trollController.isRunning = false
-                        
-                        selectedPeople = [:]
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            trollController.startBrowser()
-                        }
-                    }) {
-                        Image(systemName: "arrow.clockwise")
-                    }
-                }
+                // MARK: Breaks stuff, don't use
+//                ToolbarItemGroup(placement: .navigationBarLeading) {
+//                    Button(action: {
+//                        trollController.isRunning = false
+//                        selectedPeople = [:]
+//                        trollController.stopBrowser()
+//
+//                        killall("sharingd", false)
+//                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+//                            trollController.startBrowser()
+//                        }
+//                    }) {
+//                        Image(systemName: "arrow.clockwise")
+//                    }
+//                }
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button(action: {
                         UIImpactFeedbackGenerator(style: .light).impactOccurred() // mmm
@@ -111,7 +113,7 @@ struct ContentView: View {
                         Image("github")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(height: 24)
+                            .frame(width: 24, height: 24)
                     }
                     Button(action: {
                         UIImpactFeedbackGenerator(style: .light).impactOccurred() // mmm
@@ -120,7 +122,7 @@ struct ContentView: View {
                         Image(systemName: "heart.fill")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(height: 20)
+                            .frame(width: 20, height: 20)
                     }
                 }
             }

@@ -18,6 +18,8 @@
 		CE327927293049DE007B2098 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32791D293049DE007B2098 /* ContentView.swift */; };
 		CE327928293049DE007B2098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE32791E293049DE007B2098 /* Assets.xcassets */; };
 		CE327929293049DE007B2098 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32791F293049DE007B2098 /* Extensions.swift */; };
+		CE9B7554293297AC00D7EC02 /* TSUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9B754D293297AC00D7EC02 /* TSUtil.m */; };
+		CE9B755A2932987500D7EC02 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9B75592932987500D7EC02 /* CoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,11 @@
 		CE32791E293049DE007B2098 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE32791F293049DE007B2098 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CE32792A29304A0C007B2098 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		CE9B754D293297AC00D7EC02 /* TSUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUtil.m; sourceTree = "<group>"; };
+		CE9B7551293297AC00D7EC02 /* TSUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSUtil.h; sourceTree = "<group>"; };
+		CE9B7552293297AC00D7EC02 /* CoreServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreServices.h; sourceTree = "<group>"; };
+		CE9B75572932986D00D7EC02 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		CE9B75592932987500D7EC02 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9B755A2932987500D7EC02 /* CoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +72,7 @@
 				CE32790A293049D6007B2098 /* Trollface.png */,
 				CE3278F9293049BF007B2098 /* AirTroller */,
 				CE3278F8293049BF007B2098 /* Products */,
+				CE9B75562932986D00D7EC02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,12 +119,32 @@
 		CE32792C293155F0007B2098 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				CE9B754B293297AC00D7EC02 /* TS */,
 				CE327914293049DE007B2098 /* ImagePickerView.swift */,
 				CE327916293049DE007B2098 /* Alert.swift */,
 				CE32791F293049DE007B2098 /* Extensions.swift */,
 				CE327913293049DE007B2098 /* RemoteLog.h */,
 			);
 			path = Misc;
+			sourceTree = "<group>";
+		};
+		CE9B754B293297AC00D7EC02 /* TS */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B754D293297AC00D7EC02 /* TSUtil.m */,
+				CE9B7551293297AC00D7EC02 /* TSUtil.h */,
+				CE9B7552293297AC00D7EC02 /* CoreServices.h */,
+			);
+			path = TS;
+			sourceTree = "<group>";
+		};
+		CE9B75562932986D00D7EC02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B75592932987500D7EC02 /* CoreServices.framework */,
+				CE9B75572932986D00D7EC02 /* MobileCoreServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9B7554293297AC00D7EC02 /* TSUtil.m in Sources */,
 				CE327922293049DE007B2098 /* Alert.swift in Sources */,
 				CE327920293049DE007B2098 /* ImagePickerView.swift in Sources */,
 				CE327927293049DE007B2098 /* ContentView.swift in Sources */,
@@ -342,7 +372,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = net.sourceloc.AirTroller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -377,7 +407,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = net.sourceloc.AirTroller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
