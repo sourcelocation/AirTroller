@@ -25,7 +25,7 @@ struct ContentView: View {
     /// Custom selected image
     @State var imageURL: URL?
     
-    private var gridItemLayout = [GridItem(.adaptive(minimum: 90, maximum: 110))]
+    private var gridItemLayout = [GridItem(.adaptive(minimum: 75, maximum: 100))]
     
     var body: some View {
         NavigationView {
@@ -35,12 +35,13 @@ struct ContentView: View {
                         ProgressView()
                         Text("Searching for devices...")
                             .foregroundColor(.secondary)
+                            .padding()
                     }
                 } else {
                     VStack {
                         ScrollView {
                             LazyVGrid(columns: gridItemLayout, spacing: 8) {
-                                ForEach(trollController.people, id: \.node) { p in
+                                ForEach(trollController.people.sorted(by: { a, b in a.displayName ?? "" < b.displayName ?? "" }), id: \.node) { p in
                                     PersonView(person: p, selected: $selectedPeople[p.node])
                                         .environmentObject(trollController)
                                 }
@@ -54,56 +55,34 @@ struct ContentView: View {
                                 Slider(value: $rechargeDuration, in: 0...3.5)
                                 Text(String(format: "%.1fs", rechargeDuration))
                             }
-                            Button("Select custom image/file") {
-                                showPicker()
-                            }
-                            .padding(16)
-                            .frame(maxWidth: .infinity)
-                            .background(Color(uiColor14: UIColor.secondarySystemFill    ))
-                            .cornerRadius(8)
-                            .sheet(isPresented: $showingImagePicker) {
-                                ImagePickerView(imageURL: $imageURL)
+                            Button(action: {
+                                UIImpactFeedbackGenerator(style: .medium).impactOccurred() // mmm
+                                if imageURL == nil {
+                                    showPicker()
+                                } else {
+                                    imageURL = nil
+                                }
+                            }) {
+                                Text(imageURL == nil ? "Select custom image/file" : imageURL!.lastPathComponent)
+                                    .padding(16)
+                                    .frame(maxWidth: .infinity)
+                                    .background(Color(uiColor14: UIColor.secondarySystemFill    ))
+                                    .cornerRadius(8)
+                                    .sheet(isPresented: $showingImagePicker) {
+                                        ImagePickerView(imageURL: $imageURL)
+                                    }
                             }
                             
-                            Button(!trollController.isRunning ? "Start trolling" : "Stop trolling") {
-//                                guard selectedPeople.values.filter({ $0 == true }).count <= 2 else {
-//                                    UIApplication.shared.alert(title: "Cannot start, too many users selected", body: "AirTroller only allows trolling up to 2 people at a time. Please unselect some users to continue.")
-//                                    return
-//                                }
-                                // MARK: ~~people are physopaths~~ people ARE physopaths
-                                
-                                UIImpactFeedbackGenerator(style: .medium).impactOccurred() // mmm
-                                if !trollController.isRunning {
-                                    UIApplication.shared.confirmAlert(title: "\(UIDevice.current.name)", body: "This is the current name of this device and the name people will see when receiving an AirDrop. Are you sure you want to continue?", onOK: {
-                                        if let imageURL = imageURL {
-                                            trollController.sharedURL = imageURL
-                                        }
-                                        trollController.startTrolling(shouldTrollHandler: { person in
-                                            return selectedPeople[person.node] ?? false // troll only selected people
-                                        }, eventHandler: { event in
-                                            switch event {
-                                            case .operationEvent(let event1):
-                                                if event1 == .canceled || event1 == .finished || event1 == .blocked {
-                                                    totalAirDrops += 1
-                                                    UISelectionFeedbackGenerator().selectionChanged()
-                                                }
-                                            case .cancelled:
-                                                totalAirDrops += 1
-                                                UISelectionFeedbackGenerator().selectionChanged()
-                                            }
-                                        }) // start trolling :troll:
-                                        trollController.isRunning.toggle()
-                                    }, noCancel: false)
-                                } else {
-                                    trollController.stopTrollings()
-                                    trollController.isRunning.toggle()
-                                }
+                            Button(action: {
+                                toggleTrollButtonTapped()
+                            }) {
+                                Text(!trollController.isRunning ? "Start trolling" : "Stop trolling")
+                                    .padding(16)
+                                    .frame(maxWidth: .infinity)
+                                    .background(Color.accentColor)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(8)
                             }
-                            .padding(16)
-                            .frame(maxWidth: .infinity)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(8)
                         }
                         .padding()
                     }
@@ -111,8 +90,22 @@ struct ContentView: View {
             }
             .navigationTitle("AirTroller")
             .toolbar {
+                ToolbarItemGroup(placement: .navigationBarLeading) {
+                    Button(action: {
+                        trollController.stopBrowser()
+                        trollController.isRunning = false
+                        
+                        selectedPeople = [:]
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            trollController.startBrowser()
+                        }
+                    }) {
+                        Image(systemName: "arrow.clockwise")
+                    }
+                }
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button(action: {
+                        UIImpactFeedbackGenerator(style: .light).impactOccurred() // mmm
                         openURL(URL(string: "https://github.com/sourcelocation/AirTroller")!)
                     }) {
                         Image("github")
@@ -121,6 +114,7 @@ struct ContentView: View {
                             .frame(height: 24)
                     }
                     Button(action: {
+                        UIImpactFeedbackGenerator(style: .light).impactOccurred() // mmm
                         openURL(URL(string: "https://ko-fi.com/sourcelocation")!)
                     }) {
                         Image(systemName: "heart.fill")
@@ -133,6 +127,7 @@ struct ContentView: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .onAppear {
+            // Start searching nodes
             trollController.startBrowser()
         }
         .onChange(of: rechargeDuration) { newValue in
@@ -148,6 +143,41 @@ struct ContentView: View {
                 // show picker if authorized
                 showingImagePicker = status == .authorized
             }
+        }
+    }
+    
+    func toggleTrollButtonTapped() {
+        UIImpactFeedbackGenerator(style: .medium).impactOccurred() // mmm
+        
+        guard selectedPeople.values.filter({ $0 == true }).count > 0 else {
+            UIApplication.shared.alert(title: "No people selected", body: "Select users by tapping on them.")
+            return
+        }
+        
+        if !trollController.isRunning {
+            UIApplication.shared.confirmAlert(title: "\(UIDevice.current.name)", body: "This is the current name of this device and the name people will see when receiving an AirDrop. Are you sure you want to continue?", onOK: {
+                if let imageURL = imageURL {
+                    trollController.sharedURL = imageURL
+                }
+                trollController.startTrolling(shouldTrollHandler: { person in
+                    return selectedPeople[person.node] ?? false // troll only selected people
+                }, eventHandler: { event in
+                    switch event {
+                    case .operationEvent(let event1):
+                        if event1 == .canceled || event1 == .finished || event1 == .blocked {
+                            totalAirDrops += 1
+                            UISelectionFeedbackGenerator().selectionChanged()
+                        }
+                    case .cancelled:
+                        totalAirDrops += 1
+                        UISelectionFeedbackGenerator().selectionChanged()
+                    }
+                }) // start trolling :troll:
+                trollController.isRunning.toggle()
+            }, noCancel: false)
+        } else {
+            trollController.stopTrollings()
+            trollController.isRunning.toggle()
         }
     }
     

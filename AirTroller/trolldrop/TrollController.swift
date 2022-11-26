@@ -124,6 +124,9 @@ public class TrollController: ObservableObject {
         // Cancel pending operations.
         stopTrollings()
         
+        // Remove all known people
+        people = []
+        
         // Invalidate the browser.
         TDKSFBrowserInvalidate(browser!)
         browser = nil
@@ -211,6 +214,7 @@ public class TrollController: ObservableObject {
                     self?.troll(node: node) // troll again :troll:
                 }
             }
+            trollings[node] = .workItem(workItem)
             // wait for airdrop to appear on target device. afaik there isn't a way to know when the alert appeared.
             DispatchQueue.main.asyncAfter(deadline: .now() + rechargeDuration, execute: workItem) // rechargeDuration is controlled via UI
         default:

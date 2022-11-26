@@ -79,13 +79,10 @@
 			isa = PBXGroup;
 			children = (
 				CE327915293049DE007B2098 /* AirTrollerApp.swift */,
-				CE327916293049DE007B2098 /* Alert.swift */,
+				CE32792C293155F0007B2098 /* Misc */,
 				CE32791E293049DE007B2098 /* Assets.xcassets */,
 				CE32791D293049DE007B2098 /* ContentView.swift */,
-				CE32791F293049DE007B2098 /* Extensions.swift */,
-				CE327914293049DE007B2098 /* ImagePickerView.swift */,
 				CE32791B293049DE007B2098 /* Preview Content */,
-				CE327913293049DE007B2098 /* RemoteLog.h */,
 				CE327917293049DE007B2098 /* trolldrop */,
 				CE327912293049DE007B2098 /* AirTroller-Bridging-Header.h */,
 			);
@@ -108,6 +105,17 @@
 				CE32791C293049DE007B2098 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE32792C293155F0007B2098 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				CE327914293049DE007B2098 /* ImagePickerView.swift */,
+				CE327916293049DE007B2098 /* Alert.swift */,
+				CE32791F293049DE007B2098 /* Extensions.swift */,
+				CE327913293049DE007B2098 /* RemoteLog.h */,
+			);
+			path = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +331,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Well, you've clicked this button to select photos, what did you exoect?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -357,6 +366,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Well, you've clicked this button to select photos, what did you exoect?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
