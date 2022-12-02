@@ -361,7 +361,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Well, you've clicked this button to select photos, what did you exoect?";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Well, you've clicked this button to select photos, what did you expect?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
