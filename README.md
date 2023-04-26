@@ -8,7 +8,7 @@ Join my Discord server https://discord.gg/VyVcNjRMeg
 ## FAQ
 
 ### What's the difference between TrollDrop and AirTroller?
-TrollDrop is also an AirDrop spammer, but broke on iOS 12-13, when Apple started introducing "auto-decline" techniques. AirTroller utilises a different method: sending a request and then canceling it right as target receives it, tested on iOS 14-15.7.1 target devices.
+TrollDrop is also an AirDrop spammer, but broke on iOS 12-13, when Apple started introducing "auto-decline" techniques. AirTroller utilises a different method: sending a request and then canceling it right as target receives it, tested on iOS 10-16.4.1 target devices.
 
 ### Wasn't it meant to be a $4.99 tweak?
 Yes, I planned AirTroller to be a paid tweak / app. I spent so much time on this project, so much effort, that it was awfuly painful to just give away my hard work for free. Why have I decided so? Well, iOS 16 significantly improved AirDrop "auto decline", which AirTroller was abusing - a big deal for a tweak centered around trolling your friends. It does work on iOS 15 though. I honestly don't know what to do with this tweak, because on one side it's a fun project I was working on for around a month I wanted to sell and finally replace my fried GPU, but on the other, it gets more and more useless every day, destroying it's whole purpose. I highly appreciate if you decide to donate :)
@@ -16,8 +16,8 @@ Yes, I planned AirTroller to be a paid tweak / app. I spent so much time on this
 
 ### What devices does AirTroller support?
 Troller: iOS 14 and above, TrollStore and Jailbreak
-Victim: See above, it's important
 
+Victim: iOS 10-16.4.1. **If victim is on iOS 16 it's recommended to set the time to 0.1 seconds.**
 ## Disclaimer
 I, the creator, am not responsible for any actions, and or damages, caused by this software.
 
