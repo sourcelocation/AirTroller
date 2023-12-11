@@ -16,6 +16,7 @@ Yes, I planned AirTroller to be a paid tweak / app. I spent so much time on this
 
 ### What devices does AirTroller support?
 Troller: iOS 14 and above, TrollStore and Jailbreak
+
 Victim: See above, it's important
 
 ## Disclaimer
